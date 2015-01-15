@@ -49,10 +49,25 @@
     
     for (NSDictionary * scribble in self.scribbles) {
         
+        //// Stroke color and width
+        
+        
+        
         CGContextSetLineWidth(context, [scribble[@"strokeWidth"] floatValue]);
         
         UIColor * strokeColor = scribble[@"strokeColor"];
         [strokeColor set];
+        
+        
+        //// Build Stroke Path
+        
+        BOOL typeIsScribble = [scribble[@"type"] isEqualToString:@"Scribble"];
+        BOOL typeIsLine = [scribble[@"type"] isEqualToString:@"Line"];
+        
+        if (typeIsScribble || typeIsLine) {
+            
+        }
+        
         
         CGPoint firstPoint = [scribble[@"points"][0] CGPointValue];
         CGContextMoveToPoint(context, firstPoint.x, firstPoint.y);
