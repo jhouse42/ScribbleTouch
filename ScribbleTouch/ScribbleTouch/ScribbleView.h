@@ -10,6 +10,9 @@
 
 @interface ScribbleView : UIView
 
+
 @property (nonatomic) NSMutableArray * scribbles;
+
+
 
 @end

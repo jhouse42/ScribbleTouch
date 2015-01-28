@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		70A6412D1A68198200ED3AED /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6412C1A68198200ED3AED /* ChoiceViewController.m */; };
+		70FEA9351A69910500DDFA4D /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FEA9341A69910500DDFA4D /* CircleButton.m */; };
+		70FEA93C1A699C7400DDFA4D /* shape_ellipse.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FEA9371A699C7400DDFA4D /* shape_ellipse.png */; };
+		70FEA93D1A699C7400DDFA4D /* shape_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FEA9381A699C7400DDFA4D /* shape_line.png */; };
+		70FEA93E1A699C7400DDFA4D /* shape_rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FEA9391A699C7400DDFA4D /* shape_rectangle.png */; };
+		70FEA93F1A699C7400DDFA4D /* shape_scribble.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FEA93A1A699C7400DDFA4D /* shape_scribble.png */; };
+		70FEA9401A699C7400DDFA4D /* shape_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FEA93B1A699C7400DDFA4D /* shape_triangle.png */; };
 		A9F572C41A66C7BB007B1EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F572C31A66C7BB007B1EEA /* main.m */; };
 		A9F572C71A66C7BB007B1EEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F572C61A66C7BB007B1EEA /* AppDelegate.m */; };
 		A9F572CA1A66C7BB007B1EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F572C91A66C7BB007B1EEA /* ViewController.m */; };
@@ -31,6 +37,13 @@
 /* Begin PBXFileReference section */
 		70A6412B1A68198200ED3AED /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		70A6412C1A68198200ED3AED /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
+		70FEA9331A69910500DDFA4D /* CircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleButton.h; sourceTree = "<group>"; };
+		70FEA9341A69910500DDFA4D /* CircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleButton.m; sourceTree = "<group>"; };
+		70FEA9371A699C7400DDFA4D /* shape_ellipse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_ellipse.png; sourceTree = "<group>"; };
+		70FEA9381A699C7400DDFA4D /* shape_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_line.png; sourceTree = "<group>"; };
+		70FEA9391A699C7400DDFA4D /* shape_rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_rectangle.png; sourceTree = "<group>"; };
+		70FEA93A1A699C7400DDFA4D /* shape_scribble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_scribble.png; sourceTree = "<group>"; };
+		70FEA93B1A699C7400DDFA4D /* shape_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shape_triangle.png; sourceTree = "<group>"; };
 		A9F572BE1A66C7BB007B1EEA /* ScribbleTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScribbleTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9F572C21A66C7BB007B1EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9F572C31A66C7BB007B1EEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,6 +79,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70FEA9361A699C7400DDFA4D /* shapes */ = {
+			isa = PBXGroup;
+			children = (
+				70FEA9371A699C7400DDFA4D /* shape_ellipse.png */,
+				70FEA9381A699C7400DDFA4D /* shape_line.png */,
+				70FEA9391A699C7400DDFA4D /* shape_rectangle.png */,
+				70FEA93A1A699C7400DDFA4D /* shape_scribble.png */,
+				70FEA93B1A699C7400DDFA4D /* shape_triangle.png */,
+			);
+			path = shapes;
+			sourceTree = "<group>";
+		};
 		A9F572B51A66C7BB007B1EEA = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +112,8 @@
 		A9F572C01A66C7BB007B1EEA /* ScribbleTouch */ = {
 			isa = PBXGroup;
 			children = (
+				70FEA9331A69910500DDFA4D /* CircleButton.h */,
+				70FEA9341A69910500DDFA4D /* CircleButton.m */,
 				70A6412B1A68198200ED3AED /* ChoiceViewController.h */,
 				70A6412C1A68198200ED3AED /* ChoiceViewController.m */,
 				A9F572E71A66C81E007B1EEA /* ScribbleView.h */,
@@ -105,6 +132,7 @@
 				A9F572C51A66C7BB007B1EEA /* AppDelegate.h */,
 				A9F572C61A66C7BB007B1EEA /* AppDelegate.m */,
 				A9F572CE1A66C7BB007B1EEA /* Images.xcassets */,
+				70FEA9361A699C7400DDFA4D /* shapes */,
 				A9F572D01A66C7BB007B1EEA /* LaunchScreen.xib */,
 				A9F572C21A66C7BB007B1EEA /* Info.plist */,
 				A9F572C31A66C7BB007B1EEA /* main.m */,
@@ -210,7 +238,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F572CD1A66C7BB007B1EEA /* Main.storyboard in Resources */,
+				70FEA93E1A699C7400DDFA4D /* shape_rectangle.png in Resources */,
 				A9F572D21A66C7BB007B1EEA /* LaunchScreen.xib in Resources */,
+				70FEA9401A699C7400DDFA4D /* shape_triangle.png in Resources */,
+				70FEA93D1A699C7400DDFA4D /* shape_line.png in Resources */,
+				70FEA93C1A699C7400DDFA4D /* shape_ellipse.png in Resources */,
+				70FEA93F1A699C7400DDFA4D /* shape_scribble.png in Resources */,
 				A9F572CF1A66C7BB007B1EEA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +267,7 @@
 				A9F572E91A66C81E007B1EEA /* ScribbleView.m in Sources */,
 				70A6412D1A68198200ED3AED /* ChoiceViewController.m in Sources */,
 				A9F572C41A66C7BB007B1EEA /* main.m in Sources */,
+				70FEA9351A69910500DDFA4D /* CircleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

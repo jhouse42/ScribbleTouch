@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *drawerLeftConstraint;
 
 
+
+
 @end
 
 @implementation ViewController
@@ -31,13 +33,11 @@
     NSMutableDictionary * currentScribble;
     UIColor * selectedStrokeColor;
     int selectedStrokeWidth;
-    
     UIColor *selectedFillColor;
-    
     float shapeAlpha;
-    
     NSString *selectedBlendMode;
     NSString *selectedShapeType;
+   
     
 }
 
@@ -45,11 +45,12 @@
     [super viewDidLoad];
     
     selectedFillColor = [UIColor clearColor];
-    selectedStrokeColor = [UIColor blackColor];
+    selectedStrokeColor = [UIColor clearColor];
     selectedStrokeWidth = 1;
     selectedBlendMode = @"Normal";
     selectedShapeType = @"Scribble";
-    shapeAlpha = 1;
+   
+ 
     
     
 
@@ -75,6 +76,31 @@
     selectedStrokeWidth = sender.value;
     
 }
+
+
+- (IBAction)changeAlpha:(UISlider *)sender {
+    
+    shapeAlpha = sender.value;
+}
+
+- (IBAction)clearButton:(UIButton *)sender {
+    
+    ScribbleView * sView = (ScribbleView *)self.view;
+    [sView.scribbles removeAllObjects];
+    [self.view setNeedsDisplay];
+  
+}
+
+- (IBAction)undoButton:(UIButton *)sender {
+    
+    ScribbleView * sView = (ScribbleView *)self.view;
+    [sView.scribbles removeObject:currentScribble];
+    
+    [self.view setNeedsDisplay];
+    
+    
+}
+
 
 
 - (void)choice:(NSString *)choice forGroup:(NSString *)group {
@@ -136,6 +162,13 @@
 
 - (IBAction)showHideDrawer:(id)sender {
     
+    // Make button flip
+    
+    int direction = (self.drawerLeftConstraint.constant == -16) ? -1 :1;
+    self.toggleButton.transform = CGAffineTransformMakeScale(direction, 1);
+    
+    // Show and hide drawer
+    
     self.drawerLeftConstraint.constant = (self.drawerLeftConstraint.constant == -16) ? -266: -16;
     
     
@@ -150,10 +183,11 @@
     
     
     currentScribble = [@{
-                         
+                       
                          @"type":selectedShapeType,
                          @"blend": selectedBlendMode,
-                         @"fillColor":[UIColor clearColor],
+                         @"alpha":@(shapeAlpha),
+                         @"fillColor":selectedFillColor,
                          @"strokeColor":selectedStrokeColor,
                          @"strokeWidth":@(selectedStrokeWidth),
                          @"points":[@[[NSValue valueWithCGPoint:location]] mutableCopy]
@@ -185,5 +219,7 @@
     
     [self.view setNeedsDisplay];
 }
+
+
 
 @end
